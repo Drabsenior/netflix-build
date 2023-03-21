@@ -15,9 +15,9 @@ const Banner = ({netflixOriginals}:Props) => {
     },[netflixOriginals])
     console.log(baseUrlImg+movie?.backdrop_path)
   return (
-    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end pb-12">
+    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end pb-12 ">
 
-        <div className="absolute top-0 left-0 h-[95vh] w-screen lg:w-[100%] -z-10"> 
+        <div className="absolute top-0 left-0 h-[95vh] w-screen lg:w-screen -z-10"> 
             <Image src={`${baseUrlImg}${movie?.backdrop_path || movie?.poster_path} `} fill style={{objectFit:'cover'}} alt="movieposter"/>
         </div>
         <h1 className="text-2xl lg:text-6xl md:text-4xl font-bold">{movie?.title || movie?.name || movie?.original_name}</h1>
